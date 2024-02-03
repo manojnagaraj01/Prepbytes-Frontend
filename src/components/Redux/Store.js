@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-
-import {prepBytes} from '../Redux/Slice'
+import prepBytes from '../Redux/Slice'
 
 const store = configureStore({
     reducer: prepBytes
