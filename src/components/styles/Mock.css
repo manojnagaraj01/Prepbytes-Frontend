@@ -1,0 +1,221 @@
+.mockInfo {
+    margin-top: 105px;
+    background: transparent linear-gradient(180deg, #3969ad, #1d3557);
+    min-height: 200px;
+    color: white;
+}
+
+.mockInfo>div {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mockInfo h2 {
+    width: 80%;
+    line-height: 3em;
+}
+
+.mockInfo p {
+    width: 70%;
+}
+.mockBody{
+    width: 70%;
+    margin: auto;
+}
+.mockHeading{
+    color: #22559c;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 4em;
+}
+.pastMock::before{
+    display: inline-block;
+    content: "";
+    position: relative;
+    top: 0;
+    height: 3px;
+    width: 44%;
+    margin-right: 1%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #5f8dc4;
+}
+.pastMock{
+    color: #ffa000;
+    /* display: inline; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pastMock::after{
+    display: inline-block;
+    content: "";
+    position: relative;
+    top: 0;
+    height: 3px;
+    margin-left: 1% ;
+    width: 44%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #5f8dc4;
+}
+
+.mockCard{
+    max-width: 16em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    background: transparent linear-gradient(180deg,#e0ebf9,#fff 54%,#fff) 0 0 no-repeat padding-box;
+    box-shadow: 0 10px 30px rgba(95,141,196,.2);
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 1.5em;
+}
+.mockCardDiv{
+    margin: auto;
+}
+.mockCardDiv img{
+    width: 100%;
+    max-height: 10vh;
+}
+.mockOptions{
+    display: flex;
+    justify-content: space-between;
+}
+.mockCardInfo{
+    text-align: center;
+    color: #3969ad;
+    font-weight: 500;
+}
+.cardDetails{
+    display: flex;
+    margin: 1em 0;
+}
+.cardDetails div p{
+    text-align: center;
+}
+.cardParticipant,.cardDates,.cardDuration{
+    padding:0 .8em;
+    color: #707070;
+    font-size: 15px;
+    font-weight: 500;
+}
+.detailsName{
+    font-size: 11px;
+    color: #707070;
+}
+.cardDates p{
+    padding:0 .2em;
+}
+.cardParticipant p{
+    padding:0 .2em;
+}
+.cardParticipant {
+    border-left:2px solid #e0ebf9 ;
+    border-right:2px solid #e0ebf9 ;
+}
+.cardDuration p{
+    padding:0 .2em; 
+}
+.btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    background: #22559c;
+    -webkit-box-shadow: 0 3px 6px rgba(95,141,196,.2);
+    box-shadow: 0 3px 6px rgba(95,141,196,.2);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 11px 33.7px;
+    font-size: 16px;
+    color: #fff;
+    margin: 10px 0;
+    text-decoration: none;
+    border: none;
+}
+
+.mockDataView{
+    width: 69%;
+    margin: auto;
+    margin-top: 1em;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 3em;
+}
+
+.practiceTest{
+    width: 70%;
+    margin:2em auto;
+    text-transform: uppercase;
+}
+.practiceTestCard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 69%;
+    margin: auto;
+}
+.practiceCard{
+    max-width: 20em;
+    width:12em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    background: transparent linear-gradient(180deg,#e0ebf9,#fff 54%,#fff) 0 0 no-repeat padding-box;
+    box-shadow: 0 10px 30px rgba(95,141,196,.2);
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+.companyCard{
+    max-width: 12em;
+    min-height: 9em;
+    width: 10em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    background: transparent linear-gradient(180deg,#ffe4b6,#fff 54%,#fff) 0 0 no-repeat padding-box;
+    box-shadow: 0 10px 30px rgba(95,141,196,.2);
+    border-radius: 5px;
+    margin-top: 1.5em;
+}
+
+@media screen and (max-width :1100px) {
+    .mockInfo p {
+        width: 100%;
+        font-size: 14px;
+    }
+    .mockInfo>div {
+        width: 90%;
+        margin: auto;
+        padding: 2em 0 ;
+    }
+    .practiceTest{
+        display: grid;
+        place-content: center;
+    }
+    .pastMock::before {
+        width: 100px;
+    }
+    .pastMock::after {
+        width: 100px;
+    }
+    .mockDataView {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 600px){
+    .mockDataView {
+        width: 50%;
+    }
+}

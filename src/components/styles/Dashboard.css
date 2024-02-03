@@ -1,0 +1,177 @@
+.dashboardView {
+    display: flex;
+}
+
+.sidebar {
+    min-width: 15%;
+    background-color: #fff;
+    height: 100vh;
+    margin-top: 102px;
+    box-shadow: 10px 0 10px -5px rgb(33 35 38/10%);
+    position: fixed;
+}
+
+.sidebar ul li {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ecf9ff;
+    color: #5393ec;
+    border-right: 3px solid #5393ec;
+    padding-left: 5px;
+    transition: width .8s ease;
+}
+
+.sidebar ul li svg {
+    width: 30px;
+    fill: currentColor;
+    margin-left: 10px;
+}
+
+.dashboardCardView {
+    width: 100%;
+    margin: 102px auto 0;
+    background-color: #f0f3f4;
+    min-height: 100vh;
+}
+
+.dashboardCardGrid {
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course-container {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    margin: 15px;
+    box-shadow: 0 4px 0.9em #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    width: 282px;
+    height: 348px;
+    border-radius: 10px;
+    padding: 0 12px;
+    width: 304px;
+    height: 372px;
+}
+
+.course-bg-image {
+    position: absolute;
+}
+
+.course-rating {
+    width: 30%;
+}
+
+.course-logo-info {
+    display: flex;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.course-progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-image {
+    width: 80px;
+    height: 80px;
+}
+
+.course-heading {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.course-dates-div {
+    width: 65%;
+    border-left: 1px solid #cbcbcb;
+    margin: 2px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 1.5rem;
+    height: 96px;
+}
+
+.course-dates {
+    display: flex;
+    gap: 10px;
+}
+
+.course-date-label {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.course-date {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.course-date-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.course-button {
+    color: #fff;
+    padding: 6px 30px;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    background: #00a5ec 0 0 no-repeat padding-box;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-align: center;
+    width: 234px;
+    height: 38px;
+    width: 260px;
+    z-index: 1;
+    font: normal normal 700 14px/17px Inter;
+}
+
+@media screen and (min-width:600px) and (max-width:1024px) {
+    .dashboardCardGrid {
+        width: 80%;
+    }
+
+    .course-container {
+        width: 45%;
+        margin: 1em auto;
+        min-width: 300px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .dashboardCardGrid {
+        width: 80%;
+    }
+
+    .course-container {
+        width: 45%;
+        margin: 1em auto;
+        min-width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}

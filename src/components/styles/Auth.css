@@ -1,0 +1,186 @@
+.loginSignupDiv {
+    background: url("https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/blue-background.webp") no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.achievements {
+    width: 215px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    margin-top: 40px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    text-align: center;
+    height: fit-content;
+}
+
+.achievements-logo {
+    height: 75px !important;
+    width: auto !important;
+    margin-bottom: -15px;
+    margin-top: -35px;
+}
+
+.achievements-container {
+    margin: 18px 8px;
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+.achievements-container-image {
+    width: auto !important;
+    height: 50px !important;
+}
+
+.achievements-container-detail {
+    text-align: initial;
+    color: #423c3c;
+}
+
+.achievements-container-detail-count {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: -7px;
+}
+
+.achievements-container-detail-title {
+    font-size: 14px;
+}
+
+.register-container {
+    min-width: 400px;
+    width: 20%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .160);
+    border-radius: 10px;
+    margin: 150px 90px 13%;
+    padding: 0 10px;
+    background-color: #fffffe;
+}
+
+.register-links {
+    height: 75px;
+    background: #fff;
+    margin: 0 3%;
+    padding: 10px 9% 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.link-two {
+    width: 50%;
+    color: #4a8ce5;
+    font-weight: 600;
+    border-bottom: 3px solid #4a8ce5;
+    background: #fff;
+    text-align: center;
+    padding-top: 35px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.link-two a {
+    color: #4b8ce8;
+    text-decoration: none;
+}
+
+.form-title {
+    color: #767779;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.register-select {
+    display: flex;
+    align-items: center;
+}
+
+.form-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-field>div {
+    width: 100%;
+}
+
+.form-button {
+    font-size: 16px;
+    width: 100%;
+    padding: 8px 0;
+    margin: 2em 0;
+    cursor: pointer;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    background: transparent linear-gradient(180deg, #4b8ce8, #4b8ce8) 0 0 no-repeat padding-box;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .1607843137254902);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+}
+
+.terms-and-conditions-checkbox {
+    margin: 20px 10px 0 0;
+}
+
+.link-one-active {
+    width: 50%;
+    color: #4a8ce5;
+    font-weight: 600;
+    background: #fff;
+    text-align: center;
+    padding-top: 35px;
+    text-transform: uppercase;
+    font-size: 18px;
+    border-bottom: 1px solid #4a8ce5 !important;
+    text-decoration: none;
+}
+
+.link-one-active a {
+    color: #767779;
+    text-decoration: none;
+}
+
+@media screen and (min-width:600px) and (max-width:1024px) {
+    .loginSignupDiv {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .achievements-logo {
+        display: none;
+    }
+
+    .achievements {
+        display: flex;
+        width: auto;
+    }
+
+    .register-container {
+        margin-top: 1em;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:599px) {
+    .loginSignupDiv >div>img{
+        display: none;
+    }
+    .loginSignupDiv {
+        flex-direction: column;
+        height: auto;
+        margin: 1em 0;
+    }
+    .register-container{
+        margin: 1em 0;
+        min-width: 320px;
+    }
+}

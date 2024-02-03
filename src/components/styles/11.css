@@ -1,0 +1,901 @@
+*,:after,:before {
+    margin: 0;
+    padding: 0
+}
+
+.prepbytes-min-height-active {
+    min-height: 100vh
+}
+
+.prepbytes-min-height-inactive {
+    min-height: 0
+}
+
+.popupVideo {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5)
+}
+
+.appBar {
+    width: 80%;
+    margin: auto;
+    flex-grow: 5;
+}
+
+.banner,.PPmain {
+    width: 100%
+}
+
+.banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    background-color: #fff;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.banner>img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: fill;
+    object-fit: fill
+}
+
+.tabs {
+    margin: 0
+}
+
+.rightMenu p {
+    padding: 5%;
+    margin: 7px auto
+}
+
+.videoLec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    background-color: #fff
+}
+
+.videoBanner {
+    width: 100px;
+    text-align: center;
+    display: inline-block
+}
+
+.videoBanner.false>img,.videoBanner img {
+    width: 100%;
+    height: auto
+}
+
+.falock {
+    margin-top: 20%
+}
+
+.vblock {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    background: hsla(0,4%,85.3%,.8);
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.vblock,.VBlockDiv {
+    width: 100%
+}
+
+.vlcontent {
+    position: relative;
+    display: inline-block;
+    width: 83%;
+    min-height: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background: #fff 0 0 no-repeat padding-box;
+    box-shadow: 0 0 6px rgba(0,0,0,.1607843137254902);
+    border-radius: 10px;
+    padding: 18px
+}
+
+.vlcontent:hover {
+    background: transparent linear-gradient(285deg,#fff,#fbfdff 58%,#d8e9ff 83%,#a9cdff) 0 0 no-repeat padding-box
+}
+
+.vlcontent.false {
+    background-color: #c3c3c3
+}
+
+.vlcmain {
+    width: 63%
+}
+
+.vlcheader {
+    display: inline-block;
+    padding-left: 8px;
+    color: #4b8ce8;
+    font: 700 21.05px Poppins;
+    margin-bottom: 7px;
+    font-weight: 700
+}
+
+.vlcbadge,.vlcheader.false {
+    color: #fff
+}
+
+.vlcbadge {
+    /* display: inline-block; */
+    float: right;
+    width: 3vw;
+    height: 1.5vw;
+    padding-left: 2px;
+    text-align: center;
+    background-color: #32c228;
+    font-size: 1vw
+}
+
+.vlcbadge.inProgress {
+    background-color: #e1b00f;
+    font-size: 1.2vw;
+    font-weight: 700;
+    line-height: 1.3vw
+}
+
+.vlcinfo {
+    margin-top: 4px;
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 95%;
+    text-align: left;
+    font: Regular 15.78px/22.55px Poppins;
+    letter-spacing: 0;
+    color: grey
+}
+
+.vlcbutton {
+    background: #fff 0 0 no-repeat padding-box;
+    border: 2px solid #ff219f;
+    border-radius: 5px;
+    text-align: center;
+    padding: 12px 15px;
+    font: Regular 21px Poppins;
+    color: #ff219f;
+    align-self: center;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all .2s
+}
+
+.vlcbutton:hover {
+    color: #fff;
+    background: #ff219f
+}
+
+.expansionList {
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: grey
+}
+
+.expansion {
+    height: 20px
+}
+
+.EPbtn {
+    width: 30%
+}
+
+.EPbtn,.EPtitle {
+    display: inline-block
+}
+
+.EPtitle {
+    width: 70%
+}
+
+.videoPlay {
+    color: #007fff;
+    font-size: 20px
+}
+
+.MainExpansion {
+    padding-bottom: 0
+}
+
+.videoBox {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%
+}
+
+.video_popup_close {
+    position: absolute;
+    z-index: 3;
+    top: 5vw;
+    left: 92vw;
+    color: #fff;
+    font-size: 30px
+}
+
+.video_header_content {
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 95%;
+    height: 5vh;
+    padding: 2px 2.5%;
+    color: #f1f1f1;
+    background: #000;
+    line-height: 5vh
+}
+
+.video_bottom_menu_container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    color: #f1f1f1;
+    background: #fff;
+    background: #000
+}
+
+.video_header_content h3 {
+    z-index: 2000;
+    margin: 0;
+    letter-spacing: 1.8px;
+    font-size: 14px;
+    font-weight: 400
+}
+
+.video_header_content img {
+    cursor: pointer
+}
+
+.video_menu_container {
+    position: absolute;
+    z-index: 2500;
+    top: 5vh;
+    overflow-y: scroll;
+    width: 450px;
+    height: 95vh;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-image: linear-gradient(10deg,rgba(201,239,255,.66),#d5daff)
+}
+
+.video_menu_container h2 {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: center;
+    letter-spacing: 2.3px;
+    color: #000;
+    font-size: 1.3em;
+    font-weight: 500
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    height: 95vh;
+    background-color: #000
+}
+
+.video_player_menu_subitems_container li:hover {
+    width: 80%;
+    border-bottom: .02px solid #4b8ce8
+}
+
+.expansionList a,.expansionList a:visited {
+    color: #4a4a4a
+}
+
+.placement_program_video_player {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.menu_items_video_player {
+    display: block
+}
+
+.MainTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: 40px auto 8%
+}
+
+.stepHeader {
+    display: inline-block;
+    width: 30%;
+    color: grey;
+    font-size: 15px;
+    font-weight: 700
+}
+
+.stepmain {
+    /* display: inline-block; */
+    float: right;
+    width: 70%;
+    margin-left: 0
+}
+
+.stepInsider {
+    width: 50vw;
+    border: 1px solid #000
+}
+
+.stepCir {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: -13px;
+    border: .5px solid grey;
+    border-radius: 50%;
+    background-color: #fff
+}
+
+.stepCir1 {
+    border: none
+}
+
+.stepCir2 {
+    margin-left: 10vw
+}
+
+.stepCir3 {
+    margin-left: 20vw
+}
+
+.stepCir4 {
+    margin-left: 30vw
+}
+
+.stepCir5 {
+    margin-left: 40vw
+}
+
+.stepCir6 {
+    margin-left: 50vw;
+    border: none
+}
+
+.stepLock {
+    margin: auto auto auto 5.8px;
+    color: grey
+}
+
+.stepruler {
+    position: absolute;
+    top: -3px;
+    left: 10px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.stepruler,.steptrophy {
+    opacity: none;
+    color: #007fff;
+    font-size: 30px
+}
+
+.stepCircle {
+    margin: auto auto auto 4.5px;
+    color: #007fff
+}
+
+.stepLabel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 20px
+}
+
+.stepLb {
+    position: absolute;
+    top: 30px;
+    display: inline-block;
+    width: 16.6%
+}
+
+.sfield {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 35vw;
+    min-width: 150px;
+    padding: 8px 20px 8px 25px;
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    font-size: 16px
+}
+
+.sfield:focus {
+    width: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+    border: 3px solid #077bda
+}
+
+.slabel {
+    margin-top: 3vw
+}
+
+.ovHeader {
+    display: block;
+    width: 100%;
+    margin: 4vh auto;
+    text-align: center;
+    letter-spacing: 1.2px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400
+}
+
+.detailsMain {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: auto;
+    padding: 1vw;
+    border-bottom: .5px solid rgba(216,213,213,.918)
+}
+
+.CDcard {
+    display: inline-block;
+    width: 4vw;
+    height: 4vw
+}
+
+.CDcard img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: fill;
+    object-fit: fill
+}
+
+.CDTitle {
+    width: 50%;
+    margin-top: 1.4vw;
+    margin-left: 3vw;
+    font-size: 15px
+}
+
+.CDdes,.CDTitle {
+    display: inline-block;
+    letter-spacing: 1px
+}
+
+.CDdes {
+    margin: 1.6vw auto;
+    color: grey;
+    font-size: 18px;
+    font-weight: 400
+}
+
+.Dsdivider {
+    width: 100%;
+    margin: 3vw auto;
+    border: 1px solid grey
+}
+
+.Dscontent {
+    margin-bottom: 30px
+}
+
+.DsAnsbox {
+    width: 90%;
+    height: auto;
+    min-height: 80px;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    padding: 5px;
+    border: 1px solid grey;
+    font-size: 12px
+}
+
+.DsQueshead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.bullet {
+    width: 1.7vw;
+    height: 1.7vw;
+    margin-right: 1.4vw;
+    border-radius: 50%;
+    background-color: #000
+}
+
+.bullet,.ques {
+    display: inline-block
+}
+
+.ques {
+    font-size: 1.5vw;
+    font-weight: 3px
+}
+
+.mockTest {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 95%;
+    height: auto;
+    margin: auto auto 20px;
+    border: .5px solid #c3c3c3
+}
+
+.mthead {
+    width: 20%;
+    color: rgba(31,30,30,.849);
+    font-size: 1.2vw
+}
+
+.mtcontent,.mthead {
+    display: inline-block;
+    padding: 15px;
+    font-weight: 700
+}
+
+.mtcontent {
+    width: 70%;
+    color: #fff;
+    font-size: 1vw
+}
+
+.mticon {
+    display: inline-block;
+    /* float: right; */
+    width: 10%;
+    padding: 12px;
+    color: grey;
+    font-size: 2vw
+}
+
+.mockTest:hover {
+    background-color: #c3c3c3
+}
+
+.mainVlbanner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.Vlsection {
+    display: inline-block;
+    width: 50%;
+    padding: 20px
+}
+
+.Vlbnheader {
+    text-align: center;
+    color: #007fff;
+    font-size: 20px;
+    font-weight: 700
+}
+
+.videoBNBtn {
+    width: 150px;
+    height: 35px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background-color: #007fff;
+    font-size: 15px;
+    font-weight: 700
+}
+
+.Vlbninfo {
+    padding: 25px;
+    text-align: center;
+    color: #007fff
+}
+
+.bannerSmall {
+    display: inline-block;
+    width: 250px;
+    height: 170px;
+    margin: 10px auto;
+    border: 1px solid #000
+}
+
+.ExpansionPaneContent {
+    width: 100%;
+    border: 1px solid grey
+}
+
+@media (min-width: 320px) and (max-width:767px) {
+    .appBar,.PPmain {
+        width:100%
+    }
+
+    .appBar {
+        margin: auto;
+        flex-grow: 5;
+    }
+
+    .video_menu_container {
+        width: 95%
+    }
+
+    .detailsMain {
+        width: 95%;
+        height: 50px
+    }
+
+    .CDcard {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px
+    }
+
+    .CDTitle {
+        width: 40%;
+        margin-top: 18px;
+        margin-left: 8px;
+        font-size: 12px
+    }
+
+    .CDdes {
+        margin-top: 15px;
+        padding-right: 10px;
+        text-align: center;
+        font-size: 13px
+    }
+
+    .MainTop,.stepmain {
+        display: block
+    }
+
+    .stepmain {
+        height: 640px
+    }
+
+    .stepHeader {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        color: grey;
+        font-weight: 700
+    }
+
+    .stepInsider {
+        display: block;
+        height: 300px;
+        margin-left: 12px;
+        border: none;
+        border-left: 1px solid #000
+    }
+
+    .stepCir {
+        position: absolute;
+        display: block;
+        margin-top: -310px
+    }
+
+    .stepCir1 {
+        display: block;
+        border: none;
+        background-color: #fff
+    }
+
+    .stepCir2 {
+        margin-top: -250px;
+        margin-left: 0
+    }
+
+    .stepCir3 {
+        margin-top: -190px;
+        margin-left: 0
+    }
+
+    .stepCir4 {
+        margin-top: -130px;
+        margin-left: 0
+    }
+
+    .stepCir5 {
+        margin-top: -70px;
+        margin-left: 0
+    }
+
+    .stepCir6 {
+        margin-top: -10px;
+        margin-left: 0;
+        border: none
+    }
+
+    .stepLock {
+        margin: 5px;
+        color: grey
+    }
+
+    .stepruler {
+        top: 5px;
+        left: 5px;
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg)
+    }
+
+    .stepLb {
+        position: absolute;
+        top: 5px;
+        left: 110px;
+        display: inline-block;
+        width: 170px
+    }
+
+    .videoLec {
+        width: 95%;
+        margin: 40px auto;
+        background-color: #fff;
+        -webkit-box-shadow: 0 5px 8px 2px rgba(0,0,0,.2);
+        box-shadow: 0 5px 8px 2px rgba(0,0,0,.2)
+    }
+
+    .videoBanner {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        text-align: center;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        font-size: 40px
+    }
+
+    .videoBanner img {
+        width: 130px;
+        height: 130px;
+        margin: 20px 15px
+    }
+
+    .vlcontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        height: auto;
+        padding-bottom: 10px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background: transparent linear-gradient(326deg,#fff,#fbfdff 65%,#d8e9ff 81%,#a9cdff) 0 0 no-repeat padding-box
+    }
+
+    .vlcinfo {
+        width: 100%;
+        text-align: center
+    }
+
+    .vlcmain {
+        width: 95%;
+        margin-bottom: 10px
+    }
+
+    .vlcbutton {
+        margin: 10px 0
+    }
+
+    .vlcheader.locked {
+        color: #fff
+    }
+
+    .vlcbadge {
+        width: 30px;
+        height: 20px;
+        font-size: 3vw
+    }
+
+    .vlcbadge.inProgress {
+        font-size: 7px;
+        font-weight: 0;
+        line-height: 8px
+    }
+
+    .mthead {
+        width: 25%;
+        padding: 10px;
+        font-size: 10px
+    }
+
+    .mtcontent {
+        width: 65%;
+        padding: 11px 0;
+        font-size: 10px
+    }
+
+    .mticon {
+        padding: 7px 0 0;
+        font-size: 20px
+    }
+
+    .sfield {
+        width: 70%
+    }
+
+    .bullet {
+        width: 10px;
+        height: 10px;
+        margin-right: 1.4vw;
+        border-radius: 100%;
+        background-color: #000
+    }
+
+    .bullet,.ques {
+        display: inline-block
+    }
+
+    .ques {
+        margin-top: -4px;
+        font-size: 10px;
+        font-weight: 700
+    }
+}
+
+@media (min-width: 768px) and (max-width:1024px) {
+    .appBar {
+        width:100%;
+        margin: auto;
+        flex-grow: 5;
+    }
+
+    .vlcbadge {
+        height: 2vw
+    }
+
+    .mthead {
+        padding: 14px;
+        font-size: 15px
+    }
+
+    .mtcontent {
+        padding: 13px;
+        font-size: 12px
+    }
+}
