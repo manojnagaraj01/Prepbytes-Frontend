@@ -10,8 +10,18 @@ import { useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { getUser } from '../../Redux/Slice';
+import Axios from 'axios'
 const MasterCompetitiveHome = () => {
     console.log(window.innerWidth)
+    // let loggedUser = useSelector((state) => state.username)
+    let dispatch = useDispatch();
+    useEffect(()=>{
+        dispatch(getUser())
+    },[dispatch])
+    let loggedUser=useSelector((state)=>{
+        return state
+    })
+    console.log(loggedUser)
     const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
     function getWindowDimensions() {
         const { innerWidth: width, innerHeight: height } = window;
@@ -24,11 +34,10 @@ const MasterCompetitiveHome = () => {
         function handleResize() {
             setWindowDimensions(getWindowDimensions());
         }
-
+ 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, [])
-    let dispatch = useDispatch();
     var settings = {
         dots: false,
         infinite: true,
@@ -37,10 +46,9 @@ const MasterCompetitiveHome = () => {
         slidesToScroll: 1,
         className: 'slides'
     };
-    dispatch(getUser())
-    let loggedUser = useSelector((state) => state.username)
+   
     let [toggleData, setToggleView] = useState("language");
-
+ 
     let ref = useRef()
     function handleClick() {
         ref.current?.scrollIntoView({ behavior: 'smooth' })
@@ -49,14 +57,15 @@ const MasterCompetitiveHome = () => {
         loggedUser ? makePayment() : toast.error("Login First", {
             theme: "colored"
         })
+        makePayment()
     }
     let [courseDate, setCourseDate] = useState("1 May")
     async function makePayment() {
-        const stripe = await loadStripe("pk_test_51OLfmRSFBQcGNae0imTwNJsk0l4kJ7cBgdwuzWBbNjUARpdjPb1x2tpEOX4d0pzYqsjetNJHqZYgfxWXohcFB96M00vdsAkzac");
+        const stripe = await loadStripe("pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ");
         let data = {
             "name": "Master Competitive Programming",
             "url": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/mcp-header-image.webp",
-            "price": "25000",
+            "price": "25",
             "courseDate": courseDate,
             "quantity": 1
         }
@@ -65,14 +74,22 @@ const MasterCompetitiveHome = () => {
             "email": localStorage.getItem("email")
         }
         console.log(body)
-        const headers = {
-            "Content-Type": "application/json"
-        }
-        const response = await fetch("http://localhost:4000/user/create-checkout-session", {
-            method: "POST",
-            headers: headers,
-            body: JSON.stringify(body)
-        })
+        // const headers = {
+ 
+        //     "Content-Type": "application/json",
+        //     Authorization: `Bearer pk_live_51ObcmDSJzXRCOp2JsNE22jQp7A0WNyDelFYnpgiOPNaoWPRIed75Ac6qhKEoJmaOMqCjnZVaqBNJ7vvkpb9wbZYm00Mbdxnj0A`
+        // }
+        // const response = await fetch("http://localhost:4000/user/create-checkout-session", {
+        //     method: "POST",
+        //     headers: headers,
+        //     body: JSON.stringify(body)
+        // })
+        const response =await Axios.post('http://localhost:4000/user/create-checkout-session', body,{
+            headers:{
+                Authorization:"Bearer pk_live_51ObcmDSJzXRCOp2JDBsyCGueBoSbW6op7CaqmBR9z3jMnVHT76dtgw2D1zPk5jfFgiaWxY3utKnHS0jmHWObtJ2K00CzsimHX4"
+            }
+        });
+        console.log(response)
         const session = await response.json();
         const result = await stripe.redirectToCheckout({
             sessionId: session.id
@@ -262,5 +279,5 @@ const MasterCompetitiveHome = () => {
         </div>
     )
 }
-
-export default MasterCompetitiveHome
+ 
+export default MasterCompetitiveHome;
