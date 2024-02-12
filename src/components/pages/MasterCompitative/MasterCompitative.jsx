@@ -86,7 +86,7 @@ const MasterCompetitiveHome = () => {
         // })
         const response =await Axios.post('http://localhost:4000/user/create-checkout-session', body,{
             headers:{
-                Authorization:"Bearer pk_live_51ObcmDSJzXRCOp2JDBsyCGueBoSbW6op7CaqmBR9z3jMnVHT76dtgw2D1zPk5jfFgiaWxY3utKnHS0jmHWObtJ2K00CzsimHX4"
+                Authorization:"Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ"
             }
         });
         console.log(response)

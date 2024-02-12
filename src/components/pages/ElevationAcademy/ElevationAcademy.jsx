@@ -39,7 +39,7 @@ const ElevationAcademy = () => {
             {
                 formView && <ElevationForm setFormView={setFormView} />
             }
-            <div className="elevationAcademyHome">
+            <div className="elevationAcademyHome mt-[160px]">
                 <div className='elevationAcademyHomeInfo'>
                     <h1>PrepBytes Elevation Academy - Full Stack Web Development Career</h1>
                     <p>Enroll in PrepBytes Elevation Academy - Full Stack Program and Guaranteed Tech Job of minimum 5 LPA.</p>

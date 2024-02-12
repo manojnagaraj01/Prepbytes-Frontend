@@ -2,7 +2,7 @@ import VideoCard from "./VideoCard"
 import "./../../styles/VideoTutorial.css"
 const VideoTut = () => {
     return (
-        <div className="videoMain">
+        <div className="videoMain mt-[100px]">
             <div className="videoHeader">
                 <div>
                     <p>Prepbytes Video Library</p>

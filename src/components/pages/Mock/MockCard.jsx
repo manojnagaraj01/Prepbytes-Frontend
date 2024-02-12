@@ -15,7 +15,7 @@ const Mockcard = ({ practice, name, date, participants, duration, img }) => {
     })
   }
   const buyTest = async (name, img) => {
-    const stripe = await loadStripe("fjfuydtshxjkgutsjkfuy");
+    const stripe = await loadStripe("pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ");
     let data = {
       "name": name,
       "url": img,

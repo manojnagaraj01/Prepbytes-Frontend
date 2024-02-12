@@ -35,39 +35,20 @@
     margin-top: 1em;
     background-color: #fff;
     position: relative;
-    filter: drop-shadow(5px 5px 10px black);
+    border: 2px solid gray;
 }
 
-.projectCardImg {
-    height: 100%;
-}
-
-.projectCardImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    opacity: 0.9;
-}
 
 .projectCardInfo {
     top: 0;
     position: absolute;
     z-index: 1;
-    opacity: 0;
+    /* opacity: 0; */
     color: #fff;
     width: 100%;
     height: 100%;
     display: grid;
     place-content: center;
-}
-
-.projectCard:hover .projectCardInfo {
-    transition-duration: 2s;
-    opacity: 1;
-}
-
-.projectCard:hover .projectCardImg {
-    filter: blur(3px);
 }
 
 .projectCardInfo h2 {

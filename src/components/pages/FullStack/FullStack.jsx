@@ -1,52 +1,18 @@
 import { Link } from 'react-router-dom'
 import '../../styles/FullStack.css'
-import Slider from 'react-slick'
 import { journeyData } from "./Data/Data";
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from '../../Redux/Slice';
 import { loadStripe } from '@stripe/stripe-js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const FullStack = () => {
-    // const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-    // function getWindowDimensions() {
-    //     const { innerWidth: width, innerHeight: height } = window;
-    //     return {
-    //         width,
-    //         height
-    //     };
-    // }
+
     let ref = useRef()
     function handleClick() {
         ref.current?.scrollIntoView({ behavior: 'smooth' })
     }
-    // useEffect(() => {
-    //     function handleResize() {
-    //         setWindowDimensions(getWindowDimensions());
-    //     }
-
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, [])
-    // var settings = {
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     // slidesToShow: windowDimensions.width < "600" ? 1 : windowDimensions.width > "600" && windowDimensions.width < "900" ? 2 : 3,
-    //     slidesToScroll: 1,
-    //     className: 'slides-info',
-    //     slidesToShow : 1 
-    // };
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        className: 'slides-info',
-        // slidesToShow: windowDimensions.width < "600" ? 1 : windowDimensions.width > "600" && windowDimensions.width < "900" ? 2 : 3,
-      };
     let dispatch = useDispatch();
     let [journeyItem, setjourneyData] = useState(journeyData[0])
     dispatch(getUser())
@@ -58,7 +24,7 @@ const FullStack = () => {
         })
     }
     async function makePayment() {
-        const stripe = await loadStripe("fejwhigljfk;ewjirhjkwrhhhhnaffhwfhfhewo");
+        const stripe = await loadStripe("pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ");
 
         let data = {
             "name": "Full Stack Program",
@@ -75,11 +41,11 @@ const FullStack = () => {
         const headers = {
             "Content-Type": "application/json"
         }
-        const response = await fetch("http://localhost:4000/user/create-checkout-session", {
-            method: "POST",
-            headers: headers,
-            body: JSON.stringify(body)
-        })
+        const response =await Axios.post('http://localhost:4000/user/create-checkout-session', body,{
+            headers:{
+                Authorization:"Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ"
+            }
+        });
         const session = await response.json();
         const result = await stripe.redirectToCheckout({
             sessionId: session.id
@@ -92,7 +58,7 @@ const FullStack = () => {
     return (
         <div>
             <ToastContainer/>
-            <div className='fch-home-main'>
+            <div className='fch-home-main mt-[110px]'>
                 <div className="fch-home">
                     <div className='fch-home-left'>
                         <p>Partner with</p>
@@ -220,55 +186,6 @@ const FullStack = () => {
             <div className='student-review'>
                 <p className='student-review-heading1'>Testimonials</p>
                 <p className='student-review-heading2'>Our Students Speaks</p>
-                {/* <Slider 
-                   {...settings}
-                >
-                    <div className='student-review-div'>
-                        <div className='student-review-div-info'>
-                            <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/testimonial/Shivam+Gupta.svg" alt="" />
-                            <p className='student-name-heading'>Shivam Gupta</p>
-                        </div>
-                        <div>
-                            <p className='student-reviews-para'>My coding experience has improved very much. After joining the program, I am able to write optimized code.  The mentors are very helpful. They are always concerned about the students and they explain really well. The lectures are also very simple to understand and gives a clear idea.</p>
-                        </div>
-                    </div>
-                    <div className='student-review-div'>
-                        <div className='student-review-div-info'>
-                            <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/testimonial/Shivam+Gupta.svg" alt="" />
-                            <p className='student-name-heading'>Shivam Gupta</p>
-                        </div>
-                        <div>
-                            <p className='student-reviews-para'>My coding experience has improved very much. After joining the program, I am able to write optimized code.  The mentors are very helpful. They are always concerned about the students and they explain really well. The lectures are also very simple to understand and gives a clear idea.</p>
-                        </div>
-                    </div>
-                    <div className='student-review-div'>
-                        <div className='student-review-div-info'>
-                            <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/testimonial/Shivam+Gupta.svg" alt="" />
-                            <p className='student-name-heading'>Shivam Gupta</p>
-                        </div>
-                        <div>
-                            <p className='student-reviews-para'>My coding experience has improved very much. After joining the program, I am able to write optimized code.  The mentors are very helpful. They are always concerned about the students and they explain really well. The lectures are also very simple to understand and gives a clear idea.</p>
-                        </div>
-                    </div>
-                    <div className='student-review-div'>
-                        <div className='student-review-div-info'>
-                            <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/testimonial/Shivam+Gupta.svg" alt="" />
-                            <p className='student-name-heading'>Shivam Gupta</p>
-                        </div>
-                        <div>
-                            <p className='student-reviews-para'>My coding experience has improved very much. After joining the program, I am able to write optimized code.  The mentors are very helpful. They are always concerned about the students and they explain really well. The lectures are also very simple to understand and gives a clear idea.</p>
-                        </div>
-                    </div>
-                    <div className='student-review-div'>
-                        <div className='student-review-div-info'>
-                            <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/full-stack/testimonial/Shivam+Gupta.svg" alt="" />
-                            <p className='student-name-heading'>Shivam Gupta</p>
-                        </div>
-                        <div>
-                            <p className='student-reviews-para'>My coding experience has improved very much. After joining the program, I am able to write optimized code.  The mentors are very helpful. They are always concerned about the students and they explain really well. The lectures are also very simple to understand and gives a clear idea.</p>
-                        </div>
-                    </div> 
-                </Slider> */}
             </div>
             <div className='fch-last-img'>
                 <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/digital-marketing/Feature.webp" alt="" />

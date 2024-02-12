@@ -5,8 +5,8 @@ import "./../../styles/Mock.css";
 
 const MockTest = () => {
     return (
-        <div>
-            <div className='mockInfo'>
+        <div >
+            <div className='mockInfo mt-[120px]'>
                 <div>
                     <h2>Mock Test</h2>
                     <p>Technical and Aptitude Test is a very important process of most of the placement tests. Crack your next placement with series of PrepBytes practice and mock tests. Practice subject-wise and company-wise tests. Take real-time mock tests with other students and test your preparation.</p>

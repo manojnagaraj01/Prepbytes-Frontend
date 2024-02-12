@@ -1,18 +1,5 @@
 let featureMock = [
-    {
-        "name": "Aptitude Placement 2022 - Mock test 3",
-        "date": "Sep 24",
-        "participants": 1101,
-        "duration": "60 min",
-        "img": "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1663504995662-Aptitude%20Based%20Test%203%20icon.svg"
-    },
-    {
-        "name": "Service-Based Companies 2022 - Mock Test 3",
-        "date": "Sep 22",
-        "participants": 1015,
-        "duration": "60 min",
-        "img": "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1663504948572-Service%20Based%20Test%203%20icon.svg"
-    },
+    
     {
         "name": "Product-Based Companies 2022 - Mock Test 3",
         "date": "Sep 19",
@@ -69,6 +56,20 @@ let featureMock = [
         "participants": 2564,
         "duration": "120 min",
         "img": "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1626407560177-Service%20based%20icons_Service_based_T5.svg"
+    },
+    {
+        "name": "Aptitude Placement 2022 - Mock test 3",
+        "date": "Sep 24",
+        "participants": 1101,
+        "duration": "60 min",
+        "img": "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1663504995662-Aptitude%20Based%20Test%203%20icon.svg"
+    },
+    {
+        "name": "Service-Based Companies 2022 - Mock Test 3",
+        "date": "Sep 22",
+        "participants": 1015,
+        "duration": "60 min",
+        "img": "https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1663504948572-Service%20Based%20Test%203%20icon.svg"
     },
     {
         "name": "Service Based Companies Mock Series 2021 - Test 4",
