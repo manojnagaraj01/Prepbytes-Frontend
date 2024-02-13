@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import '../../styles/Projects.css'
 
-const ProjectCard = ({name,img,link}) => {
+const ProjectCard = ({name,link}) => {
     return (
         <div className="projectCard">
             <div className="projectCardInfo">

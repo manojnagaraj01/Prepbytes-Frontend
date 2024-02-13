@@ -284,50 +284,7 @@ let syllabusData = [
 
 
 
-let studnetReview=[
-    {
-        "id":1,
-        "name":"Chetsea",
-        "company":"Juspay",
-        "img":"https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/chelsea_Juspay-1.webp",
-        "info":"Prepbytes really helped me start my prep from basic. The teachers are really helpful and were always available to clear my doubts. Thats the reason I was able to crack the interview and land an internship."
-    },
-    {
-        "id":2,
-        "name":"Susovan Ghosh",
-        "company":"StepSetGo",
-        "img":"https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/SusovanGhosh.webp",
-        "info":"It's absolutely awesome guys. Go for it without a second thought and you won't regret it!"
-    },
-    {
-        "id":3,
-        "name":"Akash Bisht",
-        "company":"AccelQ",
-        "img":"https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/akash_bisht.webp",
-        "info":"Thank you prepbytes for providing wonderful opportunity during Covid time. Its constant mentorship support program helped me to enhance my coding skills and also to get a job at a reputed company. Thanks a lot."
-    },
-    {
-        "id":4,
-        "name":"Tanej",
-        "company":"Authbridge",
-        "img":"https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Tanej+Kumar+Kata.webp",
-        "info":"Prepbytes helped  me in getting a job.I helps to fill the gap between theory and practice. Mainly what I like is the set of problems which are given just after the concept is very useful. Their doubt solving platform is good and fast. They don't give answer directly instead they ask your approach and correct that approach, this helps very much in technical interview."
-    },
-    {
-        "id":5,
-        "name":"Akshay",
-        "company":"Indiamart",
-        "img":"https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Akshay_indiamart.webp",
-        "info":"A wonderful place to learn. PrepBytes helped me in learning important topics for coding interiew and also getting placed in Indiamart. "
-    },
-    {
-        "id":6,
-        "name":"Shubham Mishra",
-        "company":"Blowhorn",
-        "img":"https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/Shubham+Mishra.webp",
-        "info":"I enrolled in Placement Program in the month of November and within 6 months Prepbytes arranged 3-4 interviews in Product based companies/startup. The course content and practice questions are up to mark, the biggest advantage of this is that you will get a doubt clearing platform and weekly live sessions from engineers working in top product based MNCs."
-    }
-]
 
 
-export { dreamJobData, newEventData, academyCardData, placedCompanyImg, syllabusData,studnetReview }
+
+export { dreamJobData, newEventData, academyCardData, placedCompanyImg, syllabusData }

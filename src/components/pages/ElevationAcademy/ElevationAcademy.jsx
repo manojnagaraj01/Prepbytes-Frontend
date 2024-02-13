@@ -1,39 +1,13 @@
-import Slider from 'react-slick'
 import AcademyCard from './AcademyCard'
 import DreamJob from './DreamJob'
-import { academyCardData, dreamJobData, newEventData, placedCompanyImg, studnetReview, syllabusData } from   "./Data/Data" ;
+import { academyCardData, dreamJobData, newEventData, placedCompanyImg,  syllabusData } from   "./Data/Data" ;
 import "../../styles/ElevationAcademy.css"
 import Syllabus from './Syllabus'
 import { useState } from 'react'
-import { useEffect } from 'react'
 import ElevationForm from './ElevationForm'
 import Event from './Event';
 const ElevationAcademy = () => {
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
     const [formView, setFormView] = useState(false)
-    function getWindowDimensions() {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-            width,
-            height
-        };
-    }
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowDimensions());
-        }
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [])
-    var settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: windowDimensions.width < "600" ? 1 : windowDimensions.width > "600" && windowDimensions.width < "900" ? 2 : 3,
-        slidesToScroll: 1,
-        className: 'slides-info'
-    };
     return (
         <div>
             {
@@ -106,29 +80,6 @@ const ElevationAcademy = () => {
                     <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/images/elevation-academy/Images/batches-back.webp" alt="" />
                 </div>
             </div>
-
-            {/* <div className='student-review'>
-                <p className='student-review-heading1'>Testimonials</p>
-                <p className='student-review-heading2'>Our Students Speaks</p>
-                <Slider {...settings}>
-                    {
-                        studnetReview.map((item) => < >
-                            <div className='student-review-div'>
-                                <div className='student-review-div-info'>
-                                    <img src={item.img} alt="" />
-                                    <div>
-                                        <p className='student-name-heading'>{item.name}</p>
-                                        <p className=''>{item.company}  </p>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p className='student-reviews-para'>{item.info}</p>
-                                </div>
-                            </div>
-                        </>)
-                    }
-                </Slider>
-            </div> */}
             <div className='placedStudent'>
                 <h1 className='placedStudentHeading'>Where our Students are placed</h1>
                 <p className='placedStudentPara'>You guarantee hard work, We guarantee placements</p>

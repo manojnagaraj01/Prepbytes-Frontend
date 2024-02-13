@@ -7,7 +7,7 @@ const Project = () => {
       <div className="projectData sticky top-0 mt-[100px]">
         {
           projectData.map((item,key)=>{
-            return <ProjectCard name={item.name} img={item.img} link={item.link} key={key}/>
+            return <ProjectCard name={item.name} link={item.link} key={key}/>
           })
         }
       </div>
