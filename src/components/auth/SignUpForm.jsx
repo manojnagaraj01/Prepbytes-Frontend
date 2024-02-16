@@ -32,7 +32,7 @@ const SignupForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/signup",
+        "https://prepbytes-backend-server.onrender.com/user/signup",
         data
       );
       const userData = response.data;

@@ -12,8 +12,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { getUser } from '../../Redux/Slice';
 import Axios from 'axios'
 const MasterCompetitiveHome = () => {
-    console.log(window.innerWidth)
-    // let loggedUser = useSelector((state) => state.username)
     let dispatch = useDispatch();
     useEffect(()=>{
         dispatch(getUser())
@@ -22,7 +20,6 @@ const MasterCompetitiveHome = () => {
         return state
     })
     console.log(loggedUser)
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
     function getWindowDimensions() {
         const { innerWidth: width, innerHeight: height } = window;
         return {
@@ -30,22 +27,6 @@ const MasterCompetitiveHome = () => {
             height
         };
     }
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowDimensions());
-        }
- 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, [])
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: windowDimensions.width < "600" ? 1 : windowDimensions.width > "600" && windowDimensions.width < "900" ? 2 : 3,
-        slidesToScroll: 1,
-        className: 'slides'
-    };
    
     let [toggleData, setToggleView] = useState("language");
  
@@ -74,20 +55,22 @@ const MasterCompetitiveHome = () => {
             "email": localStorage.getItem("email")
         }
         console.log(body)
-        // const headers = {
+        const headers = {
  
-        //     "Content-Type": "application/json",
-        //     Authorization: `Bearer pk_live_51ObcmDSJzXRCOp2JsNE22jQp7A0WNyDelFYnpgiOPNaoWPRIed75Ac6qhKEoJmaOMqCjnZVaqBNJ7vvkpb9wbZYm00Mbdxnj0A`
-        // }
+            Authorization: `Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ`,
+            "Content-Type": "application/json"
+        }
         // const response = await fetch("http://localhost:4000/user/create-checkout-session", {
         //     method: "POST",
         //     headers: headers,
         //     body: JSON.stringify(body)
         // })
-        const response =await Axios.post('http://localhost:4000/user/create-checkout-session', body,{
-            headers:{
-                Authorization:"Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ"
-            }
+        const response =await Axios.post('https://prepbytes-backend-server.onrender.com/user/create-checkout-session', body,{
+            // headers:{
+            //     Authorization:`Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ`
+            // }
+            headers
+            
         });
         console.log(response)
         const session = await response.json();
@@ -234,27 +217,6 @@ const MasterCompetitiveHome = () => {
             </div>
             <div>
                 <h1 className='mch-coding-context'>This Might Be You</h1>
-                <Slider  {...settings} style={{ width: "60%", margin: "auto" }}>
-                    {
-                        studentReview.map((item, key) => {
-                            return <div key={key} className='mch-dream-card'>
-                                <div className='mch-dream-name'>
-                                    <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Quote1.webp" alt="" />
-                                    <h3 className=''>{item.heading}</h3>
-                                </div>
-                                <div className='mch-dream-info'>
-                                    <p>{item.para}</p>
-                                </div>
-                                <div className='mch-dream-person'>
-                                    <img src={item.img_src} alt="" />
-                                    <div className='mch-dream-person-img'>
-                                        <img src="https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/zenithWebp/Quote2.webp" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        })
-                    }
-                </Slider>
             </div>
             <div className='courseEnd'>
                 <h1 className='mch-coding-context'>By The End Of This Course, You Will Be Able To</h1>

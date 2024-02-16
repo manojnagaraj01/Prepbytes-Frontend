@@ -10,7 +10,7 @@ const ElevationForm = ({setFormView}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(data)
-        axios.post("http://localhost:4000/user/sendEnquiryData",data).then(res=>{
+        axios.post("https://prepbytes-backend-server.onrender.com/user/sendEnquiryData",data).then(res=>{
             if(res.status===200){
                 setFormView(false)
             }

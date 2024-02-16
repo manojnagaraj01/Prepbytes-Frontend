@@ -11,7 +11,7 @@ const Dashboard = () => {
     let [getCourseData,setCourseData]=useState([])
     useEffect(()=>{
         console.log(email)
-        axios.post("http://localhost:4000/user/getCourseOfUser",{"email":email}).then(res=>{
+        axios.post("https://prepbytes-backend-server.onrender.com/user/getCourseOfUser",{"email":email}).then(res=>{
             if(res.data.course){
                 setCourseData(res.data.course)
             }

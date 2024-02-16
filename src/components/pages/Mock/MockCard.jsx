@@ -30,7 +30,7 @@ const Mockcard = ({ practice, name, date, participants, duration, img }) => {
     const headers = {
       "Content-Type": "application/json"
     }
-    const response = await fetch("http://localhost:4000/user/create-checkout-session", {
+    const response = await fetch("https://prepbytes-backend-server.onrender.com/user/create-checkout-session", {
       method: "POST",
       headers: headers,
       body: JSON.stringify(body)
