@@ -46,7 +46,7 @@ const MasterCompetitiveHome = () => {
         let data = {
             "name": "Master Competitive Programming",
             "url": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/mcp-header-image.webp",
-            "price": "25",
+            "price": "250",
             "courseDate": courseDate,
             "quantity": 1
         }

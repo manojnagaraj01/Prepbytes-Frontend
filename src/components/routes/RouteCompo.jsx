@@ -31,12 +31,12 @@ function RouteCompo() {
       >
         <Navbar/>
         <Routes>
-        <Route path='/' element={<HomePanel />} />
+          <Route path='/' element={<HomePanel />} />
           <Route path='/mock-test' element={<MockTest />} />
           <Route path='/preparation-videos' element={<VideoTut />} />
           <Route path='/online-full-stack-developer-mern-certification-program' element={<FullStack />} />
-        <Route path='/elevation-academy-mern' element={<ElevationAcademy />} /> 
-        <Route path='/master-competitive-programming' element={<MasterCompetitiveHome />} />
+          <Route path='/elevation-academy-mern' element={<ElevationAcademy />} /> 
+          <Route path='/master-competitive-programming' element={<MasterCompetitiveHome />} />
           <Route path='/login' element={<SignupLogin />} />
           <Route path='/signup' element={<SignupLogin />} />
           <Route path='/dashboard' element={<Dashboard />} />
