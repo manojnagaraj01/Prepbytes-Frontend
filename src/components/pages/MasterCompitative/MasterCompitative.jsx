@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { getUser } from '../../Redux/Slice';
 import Axios from 'axios'
 const MasterCompetitiveHome = () => {
+    // let loggedUser = useSelector((state) => state.username)
     let dispatch = useDispatch();
     useEffect(()=>{
         dispatch(getUser())
@@ -20,16 +21,10 @@ const MasterCompetitiveHome = () => {
         return state
     })
     console.log(loggedUser)
-    function getWindowDimensions() {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-            width,
-            height
-        };
-    }
    
+    
     let [toggleData, setToggleView] = useState("language");
- 
+
     let ref = useRef()
     function handleClick() {
         ref.current?.scrollIntoView({ behavior: 'smooth' })
@@ -46,7 +41,7 @@ const MasterCompetitiveHome = () => {
         let data = {
             "name": "Master Competitive Programming",
             "url": "https://s3.ap-south-1.amazonaws.com/www.prepbytes.com/coursePageNew/MCPWebp/mcp-header-image.webp",
-            "price": "250",
+            "price": "25",
             "courseDate": courseDate,
             "quantity": 1
         }
@@ -55,25 +50,23 @@ const MasterCompetitiveHome = () => {
             "email": localStorage.getItem("email")
         }
         console.log(body)
-        const headers = {
- 
-            Authorization: `Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ`,
-            "Content-Type": "application/json"
-        }
+        // const headers = {
+
+        //     "Content-Type": "application/json",
+        //     Authorization: `Bearer pk_live_51ObcmDSJzXRCOp2JsNE22jQp7A0WNyDelFYnpgiOPNaoWPRIed75Ac6qhKEoJmaOMqCjnZVaqBNJ7vvkpb9wbZYm00Mbdxnj0A`
+        // }
         // const response = await fetch("http://localhost:4000/user/create-checkout-session", {
         //     method: "POST",
         //     headers: headers,
         //     body: JSON.stringify(body)
         // })
-        const response =await Axios.post('https://prepbytes-backend-server.onrender.com/user/create-checkout-session', body,{
-            // headers:{
-            //     Authorization:`Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ`
-            // }
-            headers
-            
+        const response =await Axios.post('http://localhost:4000/user/create-checkout-session', body,{
+            headers:{
+                Authorization:"Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ"
+            }
         });
         console.log(response)
-        const session = await response.json();
+        const session = await response.data;
         const result = await stripe.redirectToCheckout({
             sessionId: session.id
         });
@@ -241,5 +234,5 @@ const MasterCompetitiveHome = () => {
         </div>
     )
 }
- 
-export default MasterCompetitiveHome;
+
+export default MasterCompetitiveHome
