@@ -60,7 +60,7 @@ const MasterCompetitiveHome = () => {
         //     headers: headers,
         //     body: JSON.stringify(body)
         // })
-        const response =await Axios.post('http://localhost:4000/user/create-checkout-session', body,{
+        const response =await Axios.post('https://prepbytes-backend-server.onrender.com/user/create-checkout-session', body,{
             headers:{
                 Authorization:"Bearer pk_test_51ObcmDSJzXRCOp2JE0lYlYp8nAdbAktRg9AUlsFNOOfpmJqkthAqldm8i28pLiMrr7qPE59ajAkir2kuBzwFLVEZ00AwnSbfgZ"
             }
