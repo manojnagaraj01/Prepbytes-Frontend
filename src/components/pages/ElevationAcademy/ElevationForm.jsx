@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import axios from "axios"
 import React from "react"
 
