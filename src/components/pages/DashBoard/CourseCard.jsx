@@ -19,7 +19,8 @@ const CourseCard = ({ courseData }) => {
                         <img className="course-date-icon" alt="clockIcon" src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678116-calendar-512.png" />
                         <div>
                             <div className="course-date-label">START DATE:</div>
-                            <div className="course-date">{courseData.courseDate ?? ""}</div>
+                            {/* <div className="course-date">{courseData.courseDate ?? ""}</div> */}
+                            <div className="course-date">May 1</div>
                         </div>
                     </div>
                     <div className="course-dates">
@@ -31,10 +32,9 @@ const CourseCard = ({ courseData }) => {
                     </div>
                 </div>
             </div>
-
-            <h3 className="course-heading">{courseData.name}</h3>
+            <h3 className="course-heading">Elevation Academy Batch- Full Stack Web...</h3>
+            {/* <h3 className="course-heading">{courseData.name}</h3> */}
         </div>
-
     )
 }
 

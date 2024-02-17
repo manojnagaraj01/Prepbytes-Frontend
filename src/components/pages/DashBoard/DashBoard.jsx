@@ -12,8 +12,9 @@ const Dashboard = () => {
     useEffect(()=>{
         console.log(email)
         axios.post("https://prepbytes-backend-server.onrender.com/user/get-course-offer",{"email":email}).then(res=>{
-            if(res.data.course){
-                setCourseData(res.data.course)
+        console.log(res.data)    
+        if(res.data){
+                setCourseData([res.data.course]); 
             }
             else{
                 setCourseData([])
